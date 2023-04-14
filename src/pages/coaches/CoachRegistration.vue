@@ -1,4 +1,4 @@
-<template></template>
+<template>Register</template>
 
 <script>
 export default {};
