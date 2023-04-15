@@ -1,4 +1,4 @@
-<template></template>
+<template>Contact Coach</template>
 
 <script>
 export default {};
