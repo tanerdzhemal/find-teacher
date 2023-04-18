@@ -15,6 +15,11 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    filteredCoaches() {
+      return this.$store.getters.dispatch['coaches/coaches'];
+    },
+  },
 };
 </script>
 
