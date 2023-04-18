@@ -18,11 +18,11 @@ export default {
         },
         {
           id: 'c2',
-          firstName: 'Taner',
+          firstName: 'Denis',
           lastName: 'Gyuner',
           areas: ['frontend', 'career'],
           description:
-            'I am Taner Gyuner and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
+            'I am Denis Gyuner and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
           hourlyRate: 30,
         },
       ],
