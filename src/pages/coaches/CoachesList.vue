@@ -1,30 +1,34 @@
 <template>
   <section>Filter</section>
   <section>
-    <div class="controls">
-      <button>Refresh</button>
-      <router-link to="/register">Register as Coach </router-link>
-    </div>
-    <ul v-if="hasCoaches">
-      <coach-item
-        v-for="coach in filteredCoaches"
-        :key="coach.id"
-        :id="coach.id"
-        :first-name="coach.firstName"
-        :last-name="coach.lastName"
-        :rate="coach.hourlyRate"
-        :areas="coach.areas"
-      ></coach-item>
-    </ul>
-    <h3 v-else>No Coaches found.</h3>
+    <base-card>
+      <div class="controls">
+        <button>Refresh</button>
+        <router-link to="/register">Register as Coach </router-link>
+      </div>
+      <ul v-if="hasCoaches">
+        <coach-item
+          v-for="coach in filteredCoaches"
+          :key="coach.id"
+          :id="coach.id"
+          :first-name="coach.firstName"
+          :last-name="coach.lastName"
+          :rate="coach.hourlyRate"
+          :areas="coach.areas"
+        ></coach-item>
+      </ul>
+      <h3 v-else>No Coaches found.</h3>
+    </base-card>
   </section>
 </template>
 
 <script>
 import CoachItem from '../../components/coaches/CoachItem.vue';
+import BaseCard from '../../components/ui/BaseCard.vue';
 export default {
   components: {
     CoachItem,
+    BaseCard,
   },
   data() {
     return {};
@@ -40,7 +44,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 ul {
   list-style: none;
   margin: 0;
