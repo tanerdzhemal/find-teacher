@@ -15,6 +15,7 @@ export default {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {

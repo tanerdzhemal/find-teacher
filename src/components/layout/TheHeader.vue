@@ -14,7 +14,13 @@
 header {
   width: 100%;
   height: 5rem;
-  background-color: #297897;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(39, 38, 90, 1) 0%,
+    rgba(114, 114, 199, 1) 23%,
+    rgba(0, 212, 255, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
