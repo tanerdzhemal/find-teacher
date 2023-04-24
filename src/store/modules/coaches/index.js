@@ -25,6 +25,22 @@ export default {
             'I am Denis Gyuner and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
           hourlyRate: 30,
         },
+        {
+          id: 'c3',
+          firstName: 'Test',
+          lastName: 'Career',
+          areas: ['career'],
+          description: 'TEST DESCRIPTION Career',
+          hourlyRate: '90',
+        },
+        {
+          id: 'c4',
+          firstName: 'Test',
+          lastName: 'FrontEnd',
+          areas: ['frontend'],
+          description: 'TEST DESCRIPTION frontend',
+          hourlyRate: '150',
+        },
       ],
     };
   },
