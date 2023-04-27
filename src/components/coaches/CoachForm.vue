@@ -24,7 +24,7 @@
       <label for="description">Description</label>
       <textarea
         id="description"
-        rows="3"
+        rows="5"
         v-model.trim="description.val"
         @blur="clearValidity('description')"
       ></textarea>
