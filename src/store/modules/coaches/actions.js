@@ -28,4 +28,28 @@ export default {
       id: userId,
     });
   },
+  async loadCoaches(context) {
+    const response = await fetch(
+      `https://findteacher-27f84-default-rtdb.firebaseio.com/coaches.json`
+    );
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      //...
+    }
+
+    const coaches = [];
+    for (const key in responseData) {
+      const coach = {
+        id: key,
+        firstName: responseData[key].firstName,
+        lastName: responseData[key].lastName,
+        description: responseData[key].description,
+        areas: responseData[key].areas,
+        hourlyRate: responseData[key].hourlyRate,
+      };
+      coaches.push(coach);
+    }
+    context.commit('setCoaches', coaches);
+  },
 };
