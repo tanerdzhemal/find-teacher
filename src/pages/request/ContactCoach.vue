@@ -10,7 +10,7 @@
         <textarea rows="3" id="message" v-model.trim="message"></textarea>
       </div>
       <p class="errors" v-if="!formIsValid">
-        Please enter a valid email and some message!
+        Please enter a valid email and a message!
       </p>
       <div class="actions">
         <base-button>Send Message</base-button>
