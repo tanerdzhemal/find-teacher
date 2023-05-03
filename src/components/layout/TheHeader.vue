@@ -6,6 +6,7 @@
     <ul>
       <li><router-link to="/coaches">Coaches</router-link></li>
       <li><router-link to="/requests">Requests</router-link></li>
+      <li><router-link to="/auth">Login</router-link></li>
     </ul>
   </header>
 </template>
