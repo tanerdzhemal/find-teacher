@@ -10,7 +10,13 @@
       <base-card>
         <header>
           <h2>Interested or you have any questions? Reach out now!</h2>
-          <base-button link :to="contactLink">Contact</base-button>
+          <base-button
+            link
+            :to="contactLink"
+            v-if="!buttonVisibility"
+            @click="hideContactButton"
+            >Contact</base-button
+          >
         </header>
         <router-view></router-view>
       </base-card>
@@ -35,6 +41,7 @@ export default {
   data() {
     return {
       selectedCoach: null,
+      buttonVisibility: false,
     };
   },
   computed: {
@@ -51,13 +58,18 @@ export default {
       return this.selectedCoach.description;
     },
     contactLink() {
-      return this.$route.path + '/' + this.id + '/contact';
+      return this.id + '/contact';
     },
   },
   created() {
     this.selectedCoach = this.$store.getters['coaches/coaches'].find(
       (coach) => coach.id === this.id
     );
+  },
+  methods: {
+    hideContactButton() {
+      this.buttonVisibility = !this.buttonVisibility;
+    },
   },
 };
 </script>
