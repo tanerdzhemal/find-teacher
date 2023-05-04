@@ -85,6 +85,7 @@ export default {
         this.error = err.message || 'Failed to authenticate, try later';
       }
       this.isLoading = false;
+      return this.$router.replace('/coaches');
     },
     switchAuthMode() {
       if (this.mode === 'login') {
