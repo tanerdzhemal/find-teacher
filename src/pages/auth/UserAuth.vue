@@ -1,6 +1,6 @@
 <template>
   <div>
-    <base-dialog :show="!!error" title="An error occured" @close="handleError">
+    <base-dialog :show="!!error" title="An error occured!" @close="handleError">
       <p>{{ error }}</p>
     </base-dialog>
     <base-dialog :show="isLoading" fixed title="Authenticating...">
@@ -132,5 +132,12 @@ textarea:focus {
   border-color: #3d008d;
   background-color: #faf6ff;
   outline: none;
+}
+
+p {
+  color: red;
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
 }
 </style>
