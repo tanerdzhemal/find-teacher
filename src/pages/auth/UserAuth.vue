@@ -48,6 +48,7 @@ export default {
       mode: 'login',
       isLoading: false,
       error: null,
+      not: null,
     };
   },
   computed: {
