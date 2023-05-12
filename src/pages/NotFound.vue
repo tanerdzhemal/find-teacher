@@ -1,7 +1,7 @@
 <template>
   <section>
     <base-card>
-      <h2>Page Not Foundddddd</h2>
+      <h2>Page Not Found</h2>
       <p>
         This page could not be found - maybe checks out all our
         <router-link to="/coaches">Coaches</router-link>.
